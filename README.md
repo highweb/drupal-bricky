@@ -1,1 +1,1 @@
-# drupal-bricky
+# Drupal Bricky distributive
