@@ -1,0 +1,29 @@
+{
+  "name": "drupal/bricky",
+  "description": "Bricks using oriented Drupal distribution",
+  "type": "drupal-profile",
+  "license": "GPL-2.0+",
+  "require": {
+    "composer/installers": "^1.0.24",
+    "drupal/bricks": "1.5",
+    "drupal/tweme": "~4.0",
+    "drupal/bootstrap_kit": "~4.0"
+  },
+  "replace": {
+    "drupal/core": "~8.3"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "extra": {
+    "installer-paths": {
+      "modules/contrib/{$name}": ["type:drupal-module"],
+      "themes/contrib/{$name}": ["type:drupal-theme"]
+    }
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://packages.drupal.org/8"
+    }
+  ]
+}
