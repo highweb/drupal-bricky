@@ -1,6 +1,6 @@
 name: Bricky
 type: profile
-description: 'Bricky distribution.'
+description: 'Bricks using oriented Drupal distribution'
 core: 8.x
 
 distribution:
