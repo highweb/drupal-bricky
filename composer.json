@@ -5,7 +5,7 @@
   "license": "GPL-2.0+",
   "require": {
     "composer/installers": "^1.0.24",
-    "drupal/bricks": "~1.0",
+    "drupal/bricks": "1.x-dev",
     "drupal/deploy": "~1.0",
     "drupal/tweme": "~4.0",
     "drupal/inline_entity_form": "~1.0",

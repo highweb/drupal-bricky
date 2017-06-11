@@ -4,8 +4,53 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "ee69da91a535edea6a26c6ffcd7d8b80",
+    "content-hash": "6d4730ce2c7fa02e9a5ff5be9b31a9ba",
     "packages": [
+        {
+            "name": "clue/graph",
+            "version": "v0.9.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/clue/graph.git",
+                "reference": "0336a4d5229fa61a20ccceaeab25e52ac9542700"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/clue/graph/zipball/0336a4d5229fa61a20ccceaeab25e52ac9542700",
+                "reference": "0336a4d5229fa61a20ccceaeab25e52ac9542700",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0"
+            },
+            "suggest": {
+                "graphp/algorithms": "Common graph algorithms, such as Dijkstra and Moore-Bellman-Ford (shortest path), minimum spanning tree (MST), Kruskal, Prim and many more..",
+                "graphp/graphviz": "GraphViz graph drawing / DOT output"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Fhaculty\\Graph\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A mathematical graph/network library written in PHP",
+            "homepage": "https://github.com/clue/graph",
+            "keywords": [
+                "edge",
+                "graph",
+                "mathematical",
+                "network",
+                "vertex"
+            ],
+            "time": "2015-03-07T18:11:31+00:00"
+        },
         {
             "name": "composer/installers",
             "version": "v1.3.0",
@@ -169,22 +214,18 @@
         },
         {
             "name": "drupal/bricks",
-            "version": "1.5.0",
+            "version": "dev-1.x",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/bricks",
-                "reference": "8.x-1.5"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/bricks-8.x-1.5.zip",
-                "reference": null,
-                "shasum": "eec60675cf1866224db863e6a16dbd00799b8f0b"
+                "reference": "791450de88e09b1b21b768e80797224627d8b75d"
             },
             "require": {
                 "drupal/core": "~8.0"
             },
             "require-dev": {
+                "drupal/bricks_inline": "*",
+                "drupal/eck": "*",
                 "drupal/entity_reference_revisions": "*",
                 "drupal/inline_entity_form": "*"
             },
@@ -194,8 +235,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.5",
-                    "datestamp": "1496768642"
+                    "version": "8.x-1.5+8-dev",
+                    "datestamp": "1497123542"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -212,6 +253,418 @@
             "homepage": "https://www.drupal.org/project/bricks",
             "support": {
                 "source": "http://cgit.drupalcode.org/bricks"
+            },
+            "time": "2017-06-10 20:01:18"
+        },
+        {
+            "name": "drupal/conflict",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/conflict",
+                "reference": "8.x-1.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/conflict-8.x-1.0.zip",
+                "reference": null,
+                "shasum": "9dc956fc91e5b98e36c330ec695e3c7971b5eb74"
+            },
+            "require": {
+                "drupal/core": "~8.0",
+                "graphp/algorithms": "~0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0",
+                    "datestamp": "1493568242"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "bdragon",
+                    "homepage": "https://www.drupal.org/user/53081"
+                },
+                {
+                    "name": "dixon_",
+                    "homepage": "https://www.drupal.org/user/239911"
+                },
+                {
+                    "name": "drumm",
+                    "homepage": "https://www.drupal.org/user/3064"
+                },
+                {
+                    "name": "dww",
+                    "homepage": "https://www.drupal.org/user/46549"
+                },
+                {
+                    "name": "hchonov",
+                    "homepage": "https://www.drupal.org/user/2901211"
+                },
+                {
+                    "name": "jeqq",
+                    "homepage": "https://www.drupal.org/user/1427908"
+                }
+            ],
+            "description": "Find merge conflicts in revisionable entities.",
+            "homepage": "https://www.drupal.org/project/conflict",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "https://git.drupal.org/project/conflict.git",
+                "issues": "https://www.drupal.org/project/issues/conflict"
+            }
+        },
+        {
+            "name": "drupal/deploy",
+            "version": "1.0.0-beta1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/deploy",
+                "reference": "8.x-1.0-beta1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/deploy-8.x-1.0-beta1.zip",
+                "reference": null,
+                "shasum": "50579d34fcc714b36ea432946ec36a9cbcf5af8d"
+            },
+            "require": {
+                "drupal/core": "~8.0",
+                "drupal/workspace": "*",
+                "relaxedws/replicator": "dev-master"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-beta1",
+                    "datestamp": "1490870583"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Tim Millwood",
+                    "homepage": "https://www.drupal.org/user/83372",
+                    "email": "tim@millwoodonline.co.uk"
+                },
+                {
+                    "name": "dixon_",
+                    "homepage": "https://www.drupal.org/user/239911"
+                },
+                {
+                    "name": "jeqq",
+                    "homepage": "https://www.drupal.org/user/1427908"
+                },
+                {
+                    "name": "skwashd",
+                    "homepage": "https://www.drupal.org/user/116305"
+                },
+                {
+                    "name": "timmillwood",
+                    "homepage": "https://www.drupal.org/user/227849"
+                }
+            ],
+            "description": " Allows content to be deployed between servers. Either to be used as a content staging solution or to deploy content across a cluster of different sites.",
+            "homepage": "https://www.drupal.org/project/deploy",
+            "support": {
+                "source": "http://cgit.drupalcode.org/deploy"
+            }
+        },
+        {
+            "name": "drupal/entity_reference_revisions",
+            "version": "1.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/entity_reference_revisions",
+                "reference": "8.x-1.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/entity_reference_revisions-8.x-1.3.zip",
+                "reference": null,
+                "shasum": "78aebb58efbbfcbb2faa40a1afc0830312b32631"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "require-dev": {
+                "drupal/diff": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.3",
+                    "datestamp": "1495814284"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Frans",
+                    "homepage": "https://www.drupal.org/user/514222"
+                },
+                {
+                    "name": "jeroen.b",
+                    "homepage": "https://www.drupal.org/user/1853532"
+                },
+                {
+                    "name": "miro_dietiker",
+                    "homepage": "https://www.drupal.org/user/227761"
+                }
+            ],
+            "description": "Adds a Entity Reference field type with revision support.",
+            "homepage": "https://www.drupal.org/project/entity_reference_revisions",
+            "support": {
+                "source": "http://cgit.drupalcode.org/entity_reference_revisions"
+            }
+        },
+        {
+            "name": "drupal/inline_entity_form",
+            "version": "1.0.0-beta1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/inline_entity_form",
+                "reference": "8.x-1.0-beta1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/inline_entity_form-8.x-1.0-beta1.zip",
+                "reference": null,
+                "shasum": "185ffc28a7b68d19cce057855d1c111f1741a3ea"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "require-dev": {
+                "drupal/entity_reference_revisions": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-beta1",
+                    "datestamp": "1477868343"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "bojanz",
+                    "homepage": "https://www.drupal.org/user/86106"
+                },
+                {
+                    "name": "dawehner",
+                    "homepage": "https://www.drupal.org/user/99340"
+                },
+                {
+                    "name": "rszrama",
+                    "homepage": "https://www.drupal.org/user/49344"
+                },
+                {
+                    "name": "slashrsm",
+                    "homepage": "https://www.drupal.org/user/744628"
+                },
+                {
+                    "name": "webflo",
+                    "homepage": "https://www.drupal.org/user/254778"
+                }
+            ],
+            "description": "Provides a widget for inline management (creation, modification, removal) of referenced entities.",
+            "homepage": "https://www.drupal.org/project/inline_entity_form",
+            "support": {
+                "source": "http://cgit.drupalcode.org/inline_entity_form"
+            }
+        },
+        {
+            "name": "drupal/key_value",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/key_value",
+                "reference": "8.x-1.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/key_value-8.x-1.1.zip",
+                "reference": null,
+                "shasum": "6d627af7630b28de18b3cf935014ca996f344874"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.1",
+                    "datestamp": "1493569142"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "dixon_",
+                    "homepage": "https://www.drupal.org/user/239911"
+                },
+                {
+                    "name": "jeqq",
+                    "homepage": "https://www.drupal.org/user/1427908"
+                },
+                {
+                    "name": "timmillwood",
+                    "homepage": "https://www.drupal.org/user/227849"
+                }
+            ],
+            "description": "Extends the core key-value API with a backend for lists and sorted sets that you can do range queries on.",
+            "homepage": "https://www.drupal.org/project/key_value",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "https://git.drupal.org/project/key_value.git",
+                "issues": "https://www.drupal.org/project/issues/key_value"
+            }
+        },
+        {
+            "name": "drupal/multiversion",
+            "version": "1.0.0-beta1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/multiversion",
+                "reference": "8.x-1.0-beta1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/multiversion-8.x-1.0-beta1.zip",
+                "reference": null,
+                "shasum": "7f7689921b4b921c9097c989ebe08bbf851a0c3c"
+            },
+            "require": {
+                "drupal/conflict": "*",
+                "drupal/core": "^8.1.0",
+                "drupal/key_value": "*",
+                "relaxedws/lca": "dev-master"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-beta1",
+                    "datestamp": "1493388240"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "dixon_",
+                    "homepage": "https://www.drupal.org/user/239911"
+                },
+                {
+                    "name": "jeqq",
+                    "homepage": "https://www.drupal.org/user/1427908"
+                },
+                {
+                    "name": "timmillwood",
+                    "homepage": "https://www.drupal.org/user/227849"
+                }
+            ],
+            "description": "Extends the revision support for content entities.",
+            "homepage": "https://www.drupal.org/project/multiversion",
+            "support": {
+                "source": "http://cgit.drupalcode.org/multiversion"
+            }
+        },
+        {
+            "name": "drupal/replication",
+            "version": "1.0.0-beta1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/replication",
+                "reference": "8.x-1.0-beta1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/replication-8.x-1.0-beta1.zip",
+                "reference": null,
+                "shasum": "24a0e94455da633c66ad260e99a4044c5114f882"
+            },
+            "require": {
+                "drupal/core": "~8.0",
+                "drupal/multiversion": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-beta1",
+                    "datestamp": "1490878684"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "dixon_",
+                    "homepage": "https://www.drupal.org/user/239911"
+                },
+                {
+                    "name": "jeqq",
+                    "homepage": "https://www.drupal.org/user/1427908"
+                },
+                {
+                    "name": "rooey",
+                    "homepage": "https://www.drupal.org/user/9705"
+                },
+                {
+                    "name": "timmillwood",
+                    "homepage": "https://www.drupal.org/user/227849"
+                }
+            ],
+            "description": "Provides services and entities types so assist with and log content replication.",
+            "homepage": "http://drupal.org/project/replication",
+            "support": {
+                "source": "http://cgit.drupalcode.org/replication"
             }
         },
         {
@@ -255,12 +708,257 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/tweme"
             }
+        },
+        {
+            "name": "drupal/workspace",
+            "version": "1.0.0-beta1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/workspace",
+                "reference": "8.x-1.0-beta1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/workspace-8.x-1.0-beta1.zip",
+                "reference": null,
+                "shasum": "f4d4e492ed17b6f8df284746b140984459be3b97"
+            },
+            "require": {
+                "drupal/core": "*",
+                "drupal/replication": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-beta1",
+                    "datestamp": "1490869683"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Crell",
+                    "homepage": "https://www.drupal.org/user/26398"
+                },
+                {
+                    "name": "Frank Ralf",
+                    "homepage": "https://www.drupal.org/user/216048"
+                },
+                {
+                    "name": "dixon_",
+                    "homepage": "https://www.drupal.org/user/239911"
+                },
+                {
+                    "name": "jeqq",
+                    "homepage": "https://www.drupal.org/user/1427908"
+                },
+                {
+                    "name": "jvandyk",
+                    "homepage": "https://www.drupal.org/user/2375"
+                },
+                {
+                    "name": "timmillwood",
+                    "homepage": "https://www.drupal.org/user/227849"
+                }
+            ],
+            "description": "The workspace module",
+            "homepage": "https://www.drupal.org/project/workspace",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/workspace",
+                "issues": "http://drupal.org/project/issues/workspace"
+            }
+        },
+        {
+            "name": "graphp/algorithms",
+            "version": "v0.8.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/graphp/algorithms.git",
+                "reference": "81db4049c35730767ec8f97fb5c4844234b86cef"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/graphp/algorithms/zipball/81db4049c35730767ec8f97fb5c4844234b86cef",
+                "reference": "81db4049c35730767ec8f97fb5c4844234b86cef",
+                "shasum": ""
+            },
+            "require": {
+                "clue/graph": "~0.9.0|~0.8.0",
+                "php": ">=5.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Graphp\\Algorithms\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Christian Lück",
+                    "email": "christian@lueck.tv"
+                }
+            ],
+            "description": "Common mathematical graph algorithms",
+            "homepage": "https://github.com/graphp/algorithms",
+            "keywords": [
+                "Graph algorithms",
+                "dijkstra",
+                "kruskal",
+                "minimum spanning tree",
+                "moore-bellman-ford",
+                "prim",
+                "shortest path"
+            ],
+            "time": "2015-03-08T10:12:01+00:00"
+        },
+        {
+            "name": "relaxedws/couchdb",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/relaxedws/couchdb-client.git",
+                "reference": "45197b808a5e3d72b88aabf7ac589713c676db68"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/relaxedws/couchdb-client/zipball/45197b808a5e3d72b88aabf7ac589713c676db68",
+                "reference": "45197b808a5e3d72b88aabf7ac589713c676db68",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Doctrine\\CouchDB": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Benjamin Eberlei",
+                    "email": "kontakt@beberlei.de"
+                },
+                {
+                    "name": "Lukas Kahwe Smith",
+                    "email": "smith@pooteeweet.org"
+                }
+            ],
+            "description": "CouchDB Client",
+            "homepage": "http://www.doctrine-project.org",
+            "keywords": [
+                "couchdb",
+                "persistence"
+            ],
+            "time": "2017-04-26T19:56:15+00:00"
+        },
+        {
+            "name": "relaxedws/lca",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/relaxedws/lca.git",
+                "reference": "c192d3f2c63af5114001ac8ad0eb5e7434584bf3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/relaxedws/lca/zipball/c192d3f2c63af5114001ac8ad0eb5e7434584bf3",
+                "reference": "c192d3f2c63af5114001ac8ad0eb5e7434584bf3",
+                "shasum": ""
+            },
+            "require": {
+                "graphp/algorithms": "~0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Relaxed\\LCA\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0+"
+            ],
+            "description": "Library used to find lowest common ancestor in graphs.",
+            "time": "2017-04-30 16:26:14"
+        },
+        {
+            "name": "relaxedws/replicator",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/relaxedws/couchdb-replicator.git",
+                "reference": "9c83cadde47aea643e88a7eebe92eec991e5fa5b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/relaxedws/couchdb-replicator/zipball/9c83cadde47aea643e88a7eebe92eec991e5fa5b",
+                "reference": "9c83cadde47aea643e88a7eebe92eec991e5fa5b",
+                "shasum": ""
+            },
+            "require": {
+                "relaxedws/couchdb": "~1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.8.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Relaxed\\Replicator\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "abhishek kumar",
+                    "email": "abhi170893@gmail.com"
+                }
+            ],
+            "description": "couchdb-replicator",
+            "time": "2017-05-17 09:31:09"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "drupal/bricks": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
