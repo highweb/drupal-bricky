@@ -13,9 +13,6 @@
     "drupal/eck": "~1.0",
     "drupal/bootstrap_kit": "~4.0"
   },
-  "replace": {
-    "drupal/core": "~8.3"
-  },
   "minimum-stability": "dev",
   "prefer-stable": true,
   "extra": {
