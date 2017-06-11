@@ -10,6 +10,7 @@
     "drupal/tweme": "~4.0",
     "drupal/inline_entity_form": "~1.0",
     "drupal/entity_reference_revisions": "~1.0",
+    "drupal/eck": "~1.0",
     "drupal/bootstrap_kit": "~4.0"
   },
   "replace": {
